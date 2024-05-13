@@ -1,0 +1,47 @@
+Nielsen receives transaction level scanning data (POS Data) from its partner stores on a regular basis. Stores sharing POS data include bigger format store types such as supermarkets, hypermarkets as well as smaller traditional trade grocery stores (Kirana stores), medical stores etc. using a POS machine.
+
+While in a bigger format store, all items for all transactions are scanned using a POS machine, smaller and more localized shops do not have a 100% compliance rate in terms of scanning and inputting information into the POS machine for all transactions.
+
+A transaction involving a single packet of chips or a single piece of candy may not be scanned and recorded to spare customer the inconvenience or during rush hours when the store is crowded with customers.
+
+Thus, the data received from such stores is often incomplete and lacks complete information of all transactions completed within a day.
+
+Additionally, apart from incomplete transaction data in a day, it is observed that certain stores do not share data for all active days. Stores share data ranging from 2 to 28 days in a month. While it is possible to impute/extrapolate data for 2 days of a month using 28 days of actual historical data, the vice versa is not recommended.
+
+
+Today, a blanket call is taken to include or not include the data for a store given its compliance rate and data quality. Inactivity for a couple of hours currently disqualifies a store for the whole day. While these limits are effective, it leads to high wastage of available data.
+
+Nielsen expects you to develop an automated process to filter usable stores and fill the data gaps for those stores. There are two key areas which needs to be addressed in the proposed solution:
+
+Primary objective is to build an imputation and/or extrapolation model to fill the missing data gaps for select stores by analyzing the data and determine which factors/variables/features can help best predict the store sales. 
+
+Note: You will be requested to present and defend the logic in your analysis.
+
+Optional objective -  An outlier detection system to ensure selected stores do not skew the sales at a category level.
+
+Task: Impute/Extrapolate the total value of the group products for the respective stores in the respective months.
+
+About DataSet:
+In this hackathon, you are provided with the dataset that contains store level data by brands and categories for select stores.
+
+DataSet Description:
+
+Hackathon_ Ideal_Data - The file contains brand level data for 10 stores for the last 3 months. This can be referred to as the ideal data.  
+
+Hackathon_Working_Data - This contains data for selected stores which are missing and/or incomplete.
+
+Hackathon_Mapping_File - This file is provided to help understand the column names in the data set.
+
+Hackathon_Validation_Data - This file contains the data stores and product groups for which you have to predict the TOTALVALUE.
+
+Sample Submission - This file represents what needs to be uploaded as output by candidate in the same format. The sample data is provided in the file to help understand the columns and values required.
+
+
+
+Hi Candidates, PFB FAQs based on different queries on Problem Statement:
+1) What is the difference between Data_Ideal and Data_Working?--> Ideal data file contains data for stores which are complete. This can be used as a to understand how complete stores behave. On the contrary, Data_Working files is the actual working data file that needs to be worked upon. This file has incomplete transactions that need to be imputed/predicted.
+
+2)What does it mean by ideal data?--> Ideal data refers to truth set or data from a set of stores that are complete. This is how the end data should look like at a store level.
+
+3)What is the difference between N and P?--> The difference is naming is just to ensure that stores in Data_Working and Data_Validation are distinct and independent of each other. They have no other relevance.
+4)What is the objective of this problem? --> The objective of the problem is to learn store behaviour across categories from Ideal_Data and use that on Working_Data to predict/impute missing values and then input those values in the Validation_Data file as the final submission.
